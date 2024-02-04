@@ -55,8 +55,8 @@ public class MyFirstWindowController : KerbalMonoBehaviour
 
     // Variables for logic
     public string prevBody = "init";
-    double[] coordsX = new double[] { };
-    double[] coordsY = new double[] { };
+    double[] xCoords = new double[] { };
+    double[] yCoords = new double[] { };
     private string currLz;
 
 
@@ -129,64 +129,64 @@ public class MyFirstWindowController : KerbalMonoBehaviour
             case "Moho":
                 // populate lz options
                 coordDropDown.choices = ["Select", "Moheart", "The Croissant", "Orge Rock"];
-                coordsX = [88.55, 56.4, -10.075];
-                coordsY = [-146.74, -29.37, -9.555];
+                xCoords = [88.55, 56.4, -10.075];
+                yCoords = [-146.74, -29.37, -9.555];
                 break;
 
             case "Eve":
                 // populate lz options
                 coordDropDown.choices = ["Select", "Tor", "Heart Island", "Frog Rock", "Tessellated Pavement"];
-                coordsX = [-9.082, 52.254, -18.978, 14.529];
-                coordsY = [-7.54, -110.530, -59.826, -34.729];
+                xCoords = [-9.082, 52.254, -18.978, 14.529];
+                yCoords = [-7.54, -110.530, -59.826, -34.729];
                 break;
 
             case "Gilly":
                 // populate lz options
                 coordDropDown.choices = ["Select", "Precarious Stack", "Tipping Rock"];
-                coordsX = [17.229, 28.788];
-                coordsY = [-42.965, -46.606];
+                xCoords = [17.229, 28.788];
+                yCoords = [-42.965, -46.606];
                 break;
 
             case "Kerbin":
                 // populate lz options
                 coordDropDown.choices = ["Select", "Kerbal Space Center", "Kerb-2 Summit", "Stargazer Point", "Kapy Rock", "The Lost Center"];
-                coordsX = [0, 48.638, -51.184, -48.782, 6.025];
-                coordsY = [0, 131.959, -134.182, 58.724, 48.668];
+                xCoords = [0, 48.638, -51.184, -48.782, 6.025];
+                yCoords = [0, 131.959, -134.182, 58.724, 48.668];
                 break;
 
             case "Mun":
                 // populate lz options
                 coordDropDown.choices = ["Select", "North Arch", "South Arch", "Monument", "Mun-Or-Bust Site", "Mun Mound"];
-                coordsX = [2.486, -12.466, 12.4508, -13.4, 34.93];
-                coordsY = [81.489, -140.989, 39.1959, -69.94, -28.48];
+                xCoords = [2.486, -12.466, 12.4508, -13.4, 34.93];
+                yCoords = [81.489, -140.989, 39.1959, -69.94, -28.48];
                 break;
 
             case "Minmus":
                 // populate lz options
                 coordDropDown.choices = ["Select", "Monument", "Teetering Rock"];
-                coordsX = [63.67, 26.64];
-                coordsY = [-56.58, -22.8];
+                xCoords = [63.67, 26.64];
+                yCoords = [-56.58, -22.8];
                 break;
 
             case "Duna":
                 // populate lz options
                 coordDropDown.choices = ["Select", "Portobello Point", "Giant Rock", "Muchroom Garden", "Duna Face", "Monument"];
-                coordsX = [-11.902, 4.09, -39.41, 17.054, 51.531];
-                coordsY = [86.316, -32.11, -107.56, -85.471, -51.372];
+                xCoords = [-11.902, 4.09, -39.41, 17.054, 51.531];
+                yCoords = [86.316, -32.11, -107.56, -85.471, -51.372];
                 break;
 
             case "Ike":
                 // populate lz options
                 coordDropDown.choices = ["Select", "Rock 772-024J", "Giant's Linguini"];
-                coordsX = [-24.035, 11.765];
-                coordsY = [-90.5, -146.415];
+                xCoords = [-24.035, 11.765];
+                yCoords = [-90.5, -146.415];
                 break;
 
             case "Dres":
                 // populate lz options
                 coordDropDown.choices = ["Select", "Fin Rock", "The Ultimate Quarterpipe East", "The Ultimate Quarterpipe West", "The Struts"];
-                coordsX = [-33.53, -0.355, 0.48, -10.55];
-                coordsY = [-171.05, 76.26, 58.15, 118.45];
+                xCoords = [-33.53, -0.355, 0.48, -10.55];
+                yCoords = [-171.05, 76.26, 58.15, 118.45];
                 break;
 
             case "Jool":
@@ -197,43 +197,43 @@ public class MyFirstWindowController : KerbalMonoBehaviour
             case "Layth":
                 // populate lz options
                 coordDropDown.choices = ["Select", "Megalofishicus Rex", "Ball Rocks"];
-                coordsX = [-49.9, 1.036];
-                coordsY = [-89.16, -132.335];
+                xCoords = [-49.9, 1.036];
+                yCoords = [-89.16, -132.335];
                 break;
 
             case "Vall":
                 // populate lz options
                 coordDropDown.choices = ["Select", "Fallen Mega Penitente", "The Hoagie"];
-                coordsX = [-38.546, 29.66];
-                coordsY = [59.3, 153.44];
+                xCoords = [-38.546, 29.66];
+                yCoords = [59.3, 153.44];
                 break;
 
             case "Tylo":
                 // populate lz options
                 coordDropDown.choices = ["Select", "Monument", "Jebediah's Challenge", "Tunnel Rock"];
-                coordsX = [-1.5, -11.095, 34.223];
-                coordsY = [-110.55, -64.465, 56.853];
+                xCoords = [-1.5, -11.095, 34.223];
+                yCoords = [-110.55, -64.465, 56.853];
                 break;
 
             case "Bop":
                 // populate lz options
                 coordDropDown.choices = ["Select", "The Cube", "Petrified Kraken", "Rocky Rovers"];
-                coordsX = [-64.57, -37.9, -40.222];
-                coordsY = [-49.9, -82.95, -96.033];
+                xCoords = [-64.57, -37.9, -40.222];
+                yCoords = [-49.9, -82.95, -96.033];
                 break;
 
             case "Pol":
                 // populate lz options
                 coordDropDown.choices = ["Select", "Ice Tower", "Blurp"];
-                coordsX = [18.06, 6.11];
-                coordsY = [106.48, -146.65];
+                xCoords = [18.06, 6.11];
+                yCoords = [106.48, -146.65];
                 break;
 
             case "Eeloo":
                 // populate lz options
                 coordDropDown.choices = ["Select", "Frozen Tsunami", "Captive Rock"];
-                coordsX = [-25.05, 44.057];
-                coordsY = [-109.42, 0.001];
+                xCoords = [-25.05, 44.057];
+                yCoords = [-109.42, 0.001];
                 break;
 
             default:
@@ -282,6 +282,7 @@ public class MyFirstWindowController : KerbalMonoBehaviour
         }
         else
         {
+            // Initialize the UI
             runInit();
             return;
         }
@@ -324,89 +325,18 @@ public class MyFirstWindowController : KerbalMonoBehaviour
         closeButton.clicked += () => IsWindowOpen = false;
         coordDropDown.RegisterValueChangedCallback(evt =>
         {
-            // TODO use a switch case to find the planet that we're oribiting then find the index of that matching event value
-            currLz = evt.newValue;
+            // Get the selected LZ for the current body
             string currentBody = _activeVessel.mainBody.bodyName;
+            int ndx = coordDropDown.index;
 
-            if (currLz != "Select")
-            {
-                switch (currentBody)
-                {
-                    case "Kerbol":
+            // get the coordinates
+            double x = xCoords[ndx];
+            double y = yCoords[ndx];
 
-                        break;
+            // convert to latitude and longitude
 
-                    case "Moho":
-
-                        break;
-
-                    case "Eve":
-
-                        break;
-
-                    case "Gilly":
-
-                        break;
-
-                    case "Kerbin":
-
-                        break;
-
-                    case "Mun":
-
-                        break;
-
-                    case "Minmus":
-
-                        break;
-
-                    case "Duna":
-
-                        break;
-
-                    case "Ike":
-
-                        break;
-
-                    case "Dres":
-
-                        break;
-
-                    case "Jool":
-
-                        break;
-
-                    case "Layth":
-
-                        break;
-
-                    case "Vall":
-
-                        break;
-
-                    case "Tylo":
-
-                        break;
-
-                    case "Bop":
-
-                        break;
-
-                    case "Pol":
-
-                        break;
-
-                    case "Eeloo":
-
-                        break;
-
-                    default:
-                        // what did you get?
-                        LandingBuddyProjPlugin.Logger.LogInfo($"Caught unexpected string: {currentBody}");
-
-                        break;
-                }
-            }
+            // Display lat and lon
+                        
         });
 
         // Hide the menu when the game starts up
