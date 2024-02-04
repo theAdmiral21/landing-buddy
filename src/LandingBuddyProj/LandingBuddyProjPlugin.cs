@@ -5,10 +5,12 @@ using SpaceWarp;
 using SpaceWarp.API.Assets;
 using SpaceWarp.API.Mods;
 using SpaceWarp.API.UI.Appbar;
+using SpaceWarp.API.Game.Messages;
 using LandingBuddyProj.UI;
 using UitkForKsp2.API;
 using UnityEngine;
 using UnityEngine.UIElements;
+using BepInEx.Logging;
 
 namespace LandingBuddyProj;
 
@@ -29,6 +31,12 @@ public class LandingBuddyProjPlugin : BaseSpaceWarpPlugin
     internal const string ToolbarOabButtonID = "BTN-LandingBuddyProjOAB";
     internal const string ToolbarKscButtonID = "BTN-LandingBuddyProjKSC";
 
+    // Testing debug logger
+    public new static ManualLogSource Logger { get; set; }
+
+    // Game logger
+    MyFirstWindowController controller;
+
     /// <summary>
     /// Runs when the mod is first initialized.
     /// </summary>
@@ -38,10 +46,13 @@ public class LandingBuddyProjPlugin : BaseSpaceWarpPlugin
 
         Instance = this;
 
+        // create the logger
+        Logger = base.Logger;
+
         // Load all the other assemblies used by this mod
         LoadAssemblies();
 
-        // Load the UI from the asset bundle
+        // Load the UI (umxl) from the asset bundle
         var myFirstWindowUxml = AssetManager.GetAsset<VisualTreeAsset>(
             // The case-insensitive path to the asset in the bundle is composed of:
             // - The mod GUID:
@@ -49,7 +60,7 @@ public class LandingBuddyProjPlugin : BaseSpaceWarpPlugin
             // - The name of the asset bundle:
             "LandingBuddyProj_ui/" +
             // - The path to the asset in your Unity project (without the "Assets/" part)
-            "ui/myfirstwindow/myfirstwindow.uxml"
+            "ui/myfirstwindow/lb_ui.uxml"
         );
 
         // Create the window options object
@@ -101,6 +112,18 @@ public class LandingBuddyProjPlugin : BaseSpaceWarpPlugin
             AssetManager.GetAsset<Texture2D>($"{ModGuid}/images/icon.png"),
             () => myFirstWindowController.IsWindowOpen = !myFirstWindowController.IsWindowOpen
         );
+
+        // This is where I am adding my custom functions
+
+        StateChanges.Map3DViewEntered += message =>
+        {
+            Logger.LogDebug($"Map3DViewEntered message received, TESTING DEBUG YA DIG?");
+        };
+
+        StateChanges.Map3DViewLeft += message =>
+        {
+            Logger.LogDebug($"Map3DViewEntered message received, What have I done...");
+        };
     }
 
     /// <summary>

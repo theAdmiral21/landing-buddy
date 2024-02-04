@@ -1,12 +1,11 @@
 fileFormatVersion: 2
-guid: f49119c0dc6aec7469a0374f7f606ceb
+guid: b26cf05e1405b4044adf8b1530abb311
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 2
   userData: 
-  assetBundleName: 
+  assetBundleName: landingbuddyproj_ui.bundle
   assetBundleVariant: 
   script: {fileID: 12385, guid: 0000000000000000e000000000000000, type: 0}
   disableValidation: 0
-
