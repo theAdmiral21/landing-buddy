@@ -1,0 +1,23 @@
+{
+  "spec": "2.0",
+  "mod_id": "LandingBuddyProj",
+  "author": "Thomas Williamson",
+  "name": "LandingBuddy",
+  "description": "Mod to help people land where they want to.",
+  "source": "",
+  "version": "1.0.0",
+  "version_check": "",
+  "ksp2_version": {
+    "min": "0.2.0",
+    "max": "*"
+  },
+  "dependencies": [
+    {
+      "id": "com.github.x606.spacewarp",
+      "version": {
+        "min": "1.8.0",
+        "max": "*"
+      }
+    }
+  ]
+}
